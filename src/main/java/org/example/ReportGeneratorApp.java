@@ -24,8 +24,7 @@ public class ReportGeneratorApp extends JFrame {
 	private static final String DB_URL = "jdbc:mysql://localhost:3306/biblioteka";
 	private static final String DB_USER = "root";
 	private static final String DB_PASSWORD = "rootroot";
-	private static final String REPORT_AVAILABILITY = "/Users/mefunio/Documents/template/Raport_1.jrxml";
-
+	private static final String REPORT_BOOKS_AVAILABILITY = "/Users/mefunio/Documents/template/Raport_2.jrxml";
 
 	private JTextField nameField;
 	private JTextField lastNameField;
@@ -102,7 +101,7 @@ public class ReportGeneratorApp extends JFrame {
 		try {
 			connection = createConnection();
 
-			JasperReport jasperReport = JasperCompileManager.compileReport(REPORT_AVAILABILITY);
+			JasperReport jasperReport = JasperCompileManager.compileReport(REPORT_BOOKS_AVAILABILITY);
 
 			Map<String, Object> parameters = new HashMap<>();
 			parameters.put("Imie", nameField.getText());
