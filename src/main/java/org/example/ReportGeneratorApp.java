@@ -25,8 +25,10 @@ public class ReportGeneratorApp extends JFrame {
 	private static final String DB_URL = "jdbc:mysql://localhost:3306/biblioteka";
 	private static final String DB_USER = "root";
 	private static final String DB_PASSWORD = "rootroot";
-	private static final String REPORT_BOOKS_AVAILABILITY = "/Users/mefunio/Documents/template/Raport_1.jrxml";
-	private static final String REPORT_PUBLISHERS_BOOK = "/Users/mefunio/Documents/template/Raport_2.jrxml";
+	private static final String REPORT_AVAILABILITY = "/Users/mefunio/Documents/template/Raport_1.jrxml";
+	private static final String REPORT_PUBLISHERS = "/Users/mefunio/Documents/template/Raport_2.jrxml";
+	private static final String REPORT_REVIEWS = "/Users/mefunio/Documents/template/Raport_3.jrxml";
+	private static final String REPORT_LANGUAGE = "/Users/mefunio/Documents/template/Raport_4.jrxml";
 
 	private JTextField nameField;
 	private JTextField lastNameField;
@@ -61,7 +63,7 @@ public class ReportGeneratorApp extends JFrame {
 		JLabel selectionLabel = new JLabel("Template:");
 		selectionLabel.setBounds(20, 30, 100, 30);
 
-		String[] reportOptions = {"Books Availability Report", "Publishers Book Report"};
+		String[] reportOptions = {"Books Availability Report", "Publishers Book Report", "Reviews-Rating Report", "Book Count by Language Report"};
 		reportSelector = new JComboBox<>(reportOptions);
 		reportSelector.setBounds(100, 30, 300, 30);
 
@@ -176,8 +178,10 @@ public class ReportGeneratorApp extends JFrame {
 
 	private String getReportPath(String selectedReport) {
 		return switch (selectedReport) {
-			case "Books Availability Report" -> REPORT_BOOKS_AVAILABILITY;
-			case "Publishers Book Report" -> REPORT_PUBLISHERS_BOOK;
+			case "Books Availability Report" -> REPORT_AVAILABILITY;
+			case "Publishers Book Report" -> REPORT_PUBLISHERS;
+			case "Reviews-Rating Report" -> REPORT_REVIEWS;
+			case "Book Count by Language Report" -> REPORT_LANGUAGE;
 			default -> throw new IllegalArgumentException("Invalid report selection");
 		};
 	}
