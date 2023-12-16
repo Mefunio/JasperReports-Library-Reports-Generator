@@ -24,7 +24,8 @@ public class ReportGeneratorApp extends JFrame {
 	private static final String DB_URL = "jdbc:mysql://localhost:3306/biblioteka";
 	private static final String DB_USER = "root";
 	private static final String DB_PASSWORD = "rootroot";
-	private static final String REPORT_BOOKS_AVAILABILITY = "/Users/mefunio/Documents/template/Raport_2.jrxml";
+	private static final String REPORT_BOOKS_AVAILABILITY = "/Users/mefunio/Documents/template/Raport_1.jrxml";
+	private static final String REPORT_PUBLISHERS_BOOK = "/Users/mefunio/Documents/template/Raport_2.jrxml";
 
 	private JTextField nameField;
 	private JTextField lastNameField;
