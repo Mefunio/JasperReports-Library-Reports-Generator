@@ -21,6 +21,7 @@ import net.sf.jasperreports.export.SimplePdfExporterConfiguration;
 
 public class ReportGeneratorApp extends JFrame {
 
+	private static final String LOG_FILE_NAME = "application.log";
 	private static final String DB_URL = "jdbc:mysql://localhost:3306/biblioteka";
 	private static final String DB_USER = "root";
 	private static final String DB_PASSWORD = "rootroot";
@@ -30,12 +31,13 @@ public class ReportGeneratorApp extends JFrame {
 	private JTextField nameField;
 	private JTextField lastNameField;
 	private JTextField descriptionField;
+	private JComboBox<String> reportSelector;
 
 	private static final Logger LOGGER = Logger.getLogger(ReportGeneratorApp.class.getName());
 
 	static {
 		try {
-			FileHandler fileHandler = new FileHandler("application.log", true);
+			FileHandler fileHandler = new FileHandler(LOG_FILE_NAME, true);
 			fileHandler.setFormatter(new SimpleFormatter());
 			LOGGER.addHandler(fileHandler);
 			LOGGER.setLevel(Level.ALL);
@@ -49,40 +51,49 @@ public class ReportGeneratorApp extends JFrame {
 
 		initComponents();
 		setLayout(new BorderLayout());
-		setSize(400, 250);
+		setSize(500, 300);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setLocationRelativeTo(null);
 		setVisible(true);
 	}
 
 	private void initComponents() {
-		JLabel imieLabel = new JLabel("Name:");
-		imieLabel.setBounds(20, 30, 100, 30);
+		JLabel selectionLabel = new JLabel("Template:");
+		selectionLabel.setBounds(20, 30, 100, 30);
+
+		String[] reportOptions = {"Books Availability Report", "Publishers Book Report"};
+		reportSelector = new JComboBox<>(reportOptions);
+		reportSelector.setBounds(100, 30, 300, 30);
+
+		JLabel nameLabel = new JLabel("Name:");
+		nameLabel.setBounds(20, 70, 100, 30);
 
 		nameField = new JTextField();
-		nameField.setBounds(120, 30, 200, 30);
+		nameField.setBounds(100, 70, 300, 30);
 
-		JLabel nazwiskoLabel = new JLabel("Last name:");
-		nazwiskoLabel.setBounds(20, 70, 100, 30);
+		JLabel lastNameLabel = new JLabel("Last name:");
+		lastNameLabel.setBounds(20, 110, 100, 30);
 
 		lastNameField = new JTextField();
-		lastNameField.setBounds(120, 70, 200, 30);
+		lastNameField.setBounds(100, 110, 300, 30);
 
-		JLabel opisLabel = new JLabel("Description:");
-		opisLabel.setBounds(20, 110, 100, 30);
+		JLabel descriptionLabel = new JLabel("Description:");
+		descriptionLabel.setBounds(20, 150, 100, 30);
 
 		descriptionField = new JTextField();
-		descriptionField.setBounds(120, 110, 200, 30);
+		descriptionField.setBounds(100, 150, 300, 30);
 
 		JButton generateButton = new JButton("Generate Report");
-		generateButton.setBounds(120, 150, 200, 30);
+		generateButton.setBounds(100, 210, 300, 30);
 		generateButton.addActionListener(e -> generateReport());
 
-		add(imieLabel);
+		add(selectionLabel);
+		add(reportSelector);
+		add(nameLabel);
 		add(nameField);
-		add(nazwiskoLabel);
+		add(lastNameLabel);
 		add(lastNameField);
-		add(opisLabel);
+		add(descriptionLabel);
 		add(descriptionField);
 		add(generateButton);
 	}
@@ -97,12 +108,31 @@ public class ReportGeneratorApp extends JFrame {
 			return;
 		}
 
+		JFileChooser fileChooser = new JFileChooser();
+		fileChooser.setDialogTitle("Export");
+		int userSelection = fileChooser.showSaveDialog(this);
+
+		if (userSelection != JFileChooser.APPROVE_OPTION) {
+			return;
+		}
+
+		File fileToSave = fileChooser.getSelectedFile();
+
+		if (!fileToSave.getName().toLowerCase().endsWith(".pdf")) {
+			JOptionPane.showMessageDialog(this, "Please enter a file name ending with '.pdf'", "Error", JOptionPane.ERROR_MESSAGE);
+			return;
+		}
+
 		Connection connection = null;
 
 		try {
 			connection = createConnection();
 
-			JasperReport jasperReport = JasperCompileManager.compileReport(REPORT_BOOKS_AVAILABILITY);
+			String selectedReport = (String) reportSelector.getSelectedItem();
+			assert selectedReport != null;
+			String reportPath = getReportPath(selectedReport);
+
+			JasperReport jasperReport = JasperCompileManager.compileReport(reportPath);
 
 			Map<String, Object> parameters = new HashMap<>();
 			parameters.put("Imie", nameField.getText());
@@ -111,7 +141,7 @@ public class ReportGeneratorApp extends JFrame {
 
 			JasperPrint jasperPrint = JasperFillManager.fillReport(jasperReport, parameters, connection);
 
-			JRPdfExporter exporter = getExporter(jasperPrint);
+			JRPdfExporter exporter = getExporter(jasperPrint, fileToSave);
 			exporter.exportReport();
 
 			JOptionPane.showMessageDialog(this, "Report generated successfully!");
@@ -132,17 +162,24 @@ public class ReportGeneratorApp extends JFrame {
 		}
 	}
 
-		private static JRPdfExporter getExporter(JasperPrint jasperPrint) {
+	private static JRPdfExporter getExporter(JasperPrint jasperPrint, File fileToSave) {
 		SimplePdfExporterConfiguration exporterConfig = new SimplePdfExporterConfiguration();
 		exporterConfig.setMetadataAuthor("Public Library");
-		exporterConfig.setEncrypted(true);
+		exporterConfig.setEncrypted(false);
 
 		JRPdfExporter exporter = new JRPdfExporter();
 		exporter.setConfiguration(exporterConfig);
-
 		exporter.setExporterInput(new SimpleExporterInput(jasperPrint));
-		exporter.setExporterOutput(new SimpleOutputStreamExporterOutput(new File("report.pdf")));
+		exporter.setExporterOutput(new SimpleOutputStreamExporterOutput(fileToSave));
 		return exporter;
+	}
+
+	private String getReportPath(String selectedReport) {
+		return switch (selectedReport) {
+			case "Books Availability Report" -> REPORT_BOOKS_AVAILABILITY;
+			case "Publishers Book Report" -> REPORT_PUBLISHERS_BOOK;
+			default -> throw new IllegalArgumentException("Invalid report selection");
+		};
 	}
 
 	public static void main(String[] args) {
