@@ -1,0 +1,414 @@
+Dec 15, 2023 9:26:51 PM org.example.ReportGeneratorApp generateReport
+INFO: Database connection closed successfully.
+Dec 15, 2023 9:33:53 PM org.example.ReportGeneratorApp generateReport
+INFO: Database connection closed successfully.
+Dec 15, 2023 9:37:19 PM org.example.ReportGeneratorApp generateReport
+INFO: Database connection closed successfully.
+Dec 15, 2023 9:42:12 PM org.example.ReportGeneratorApp generateReport
+SEVERE: Error generating report
+net.sf.jasperreports.engine.JRException: java.io.FileNotFoundException: /Users/mefunio/Documents/template/Raport_1r.jrxml (No such file or directory)
+	at net.sf.jasperreports.engine.xml.JRXmlLoader.load(JRXmlLoader.java:224)
+	at net.sf.jasperreports.engine.xml.JRXmlLoader.load(JRXmlLoader.java:195)
+	at net.sf.jasperreports.engine.xml.JRXmlLoader.load(JRXmlLoader.java:186)
+	at net.sf.jasperreports.engine.JasperCompileManager.compile(JasperCompileManager.java:289)
+	at net.sf.jasperreports.engine.JasperCompileManager.compileReport(JasperCompileManager.java:576)
+	at org.example.ReportGeneratorApp.generateReport(ReportGeneratorApp.java:110)
+	at org.example.ReportGeneratorApp.lambda$initComponents$0(ReportGeneratorApp.java:81)
+	at java.desktop/javax.swing.AbstractButton.fireActionPerformed(AbstractButton.java:1972)
+	at java.desktop/javax.swing.AbstractButton$Handler.actionPerformed(AbstractButton.java:2314)
+	at java.desktop/javax.swing.DefaultButtonModel.fireActionPerformed(DefaultButtonModel.java:407)
+	at java.desktop/javax.swing.DefaultButtonModel.setPressed(DefaultButtonModel.java:262)
+	at java.desktop/javax.swing.plaf.basic.BasicButtonListener.mouseReleased(BasicButtonListener.java:279)
+	at java.desktop/java.awt.Component.processMouseEvent(Component.java:6621)
+	at java.desktop/javax.swing.JComponent.processMouseEvent(JComponent.java:3398)
+	at java.desktop/java.awt.Component.processEvent(Component.java:6386)
+	at java.desktop/java.awt.Container.processEvent(Container.java:2266)
+	at java.desktop/java.awt.Component.dispatchEventImpl(Component.java:4996)
+	at java.desktop/java.awt.Container.dispatchEventImpl(Container.java:2324)
+	at java.desktop/java.awt.Component.dispatchEvent(Component.java:4828)
+	at java.desktop/java.awt.LightweightDispatcher.retargetMouseEvent(Container.java:4948)
+	at java.desktop/java.awt.LightweightDispatcher.processMouseEvent(Container.java:4575)
+	at java.desktop/java.awt.LightweightDispatcher.dispatchEvent(Container.java:4516)
+	at java.desktop/java.awt.Container.dispatchEventImpl(Container.java:2310)
+	at java.desktop/java.awt.Window.dispatchEventImpl(Window.java:2780)
+	at java.desktop/java.awt.Component.dispatchEvent(Component.java:4828)
+	at java.desktop/java.awt.EventQueue.dispatchEventImpl(EventQueue.java:775)
+	at java.desktop/java.awt.EventQueue$4.run(EventQueue.java:720)
+	at java.desktop/java.awt.EventQueue$4.run(EventQueue.java:714)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:400)
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:87)
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:98)
+	at java.desktop/java.awt.EventQueue$5.run(EventQueue.java:747)
+	at java.desktop/java.awt.EventQueue$5.run(EventQueue.java:745)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:400)
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:87)
+	at java.desktop/java.awt.EventQueue.dispatchEvent(EventQueue.java:744)
+	at java.desktop/java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:203)
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:124)
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:113)
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:109)
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101)
+	at java.desktop/java.awt.EventDispatchThread.run(EventDispatchThread.java:90)
+Caused by: java.io.FileNotFoundException: /Users/mefunio/Documents/template/Raport_1r.jrxml (No such file or directory)
+	at java.base/java.io.FileInputStream.open0(Native Method)
+	at java.base/java.io.FileInputStream.open(FileInputStream.java:213)
+	at java.base/java.io.FileInputStream.<init>(FileInputStream.java:152)
+	at net.sf.jasperreports.engine.xml.JRXmlLoader.load(JRXmlLoader.java:219)
+	... 41 more
+
+Dec 15, 2023 9:42:14 PM org.example.ReportGeneratorApp generateReport
+INFO: Database connection closed successfully.
+Dec 15, 2023 10:01:50 PM org.example.ReportGeneratorApp generateReport
+INFO: Database connection closed successfully.
+Dec 16, 2023 10:36:03 AM org.example.ReportGeneratorApp generateReport
+SEVERE: Error generating report
+net.sf.jasperreports.engine.JRException: java.io.FileNotFoundException: /Users/mefunio/Documents/template/Raport_2.jrxml (No such file or directory)
+	at net.sf.jasperreports.engine.xml.JRXmlLoader.load(JRXmlLoader.java:224)
+	at net.sf.jasperreports.engine.xml.JRXmlLoader.load(JRXmlLoader.java:195)
+	at net.sf.jasperreports.engine.xml.JRXmlLoader.load(JRXmlLoader.java:186)
+	at net.sf.jasperreports.engine.JasperCompileManager.compile(JasperCompileManager.java:289)
+	at net.sf.jasperreports.engine.JasperCompileManager.compileReport(JasperCompileManager.java:576)
+	at org.example.ReportGeneratorApp.generateReport(ReportGeneratorApp.java:105)
+	at org.example.ReportGeneratorApp.lambda$initComponents$0(ReportGeneratorApp.java:79)
+	at java.desktop/javax.swing.AbstractButton.fireActionPerformed(AbstractButton.java:1972)
+	at java.desktop/javax.swing.AbstractButton$Handler.actionPerformed(AbstractButton.java:2314)
+	at java.desktop/javax.swing.DefaultButtonModel.fireActionPerformed(DefaultButtonModel.java:407)
+	at java.desktop/javax.swing.DefaultButtonModel.setPressed(DefaultButtonModel.java:262)
+	at java.desktop/javax.swing.plaf.basic.BasicButtonListener.mouseReleased(BasicButtonListener.java:279)
+	at java.desktop/java.awt.Component.processMouseEvent(Component.java:6621)
+	at java.desktop/javax.swing.JComponent.processMouseEvent(JComponent.java:3398)
+	at java.desktop/java.awt.Component.processEvent(Component.java:6386)
+	at java.desktop/java.awt.Container.processEvent(Container.java:2266)
+	at java.desktop/java.awt.Component.dispatchEventImpl(Component.java:4996)
+	at java.desktop/java.awt.Container.dispatchEventImpl(Container.java:2324)
+	at java.desktop/java.awt.Component.dispatchEvent(Component.java:4828)
+	at java.desktop/java.awt.LightweightDispatcher.retargetMouseEvent(Container.java:4948)
+	at java.desktop/java.awt.LightweightDispatcher.processMouseEvent(Container.java:4575)
+	at java.desktop/java.awt.LightweightDispatcher.dispatchEvent(Container.java:4516)
+	at java.desktop/java.awt.Container.dispatchEventImpl(Container.java:2310)
+	at java.desktop/java.awt.Window.dispatchEventImpl(Window.java:2780)
+	at java.desktop/java.awt.Component.dispatchEvent(Component.java:4828)
+	at java.desktop/java.awt.EventQueue.dispatchEventImpl(EventQueue.java:775)
+	at java.desktop/java.awt.EventQueue$4.run(EventQueue.java:720)
+	at java.desktop/java.awt.EventQueue$4.run(EventQueue.java:714)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:400)
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:87)
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:98)
+	at java.desktop/java.awt.EventQueue$5.run(EventQueue.java:747)
+	at java.desktop/java.awt.EventQueue$5.run(EventQueue.java:745)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:400)
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:87)
+	at java.desktop/java.awt.EventQueue.dispatchEvent(EventQueue.java:744)
+	at java.desktop/java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:203)
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:124)
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:113)
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:109)
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101)
+	at java.desktop/java.awt.EventDispatchThread.run(EventDispatchThread.java:90)
+Caused by: java.io.FileNotFoundException: /Users/mefunio/Documents/template/Raport_2.jrxml (No such file or directory)
+	at java.base/java.io.FileInputStream.open0(Native Method)
+	at java.base/java.io.FileInputStream.open(FileInputStream.java:213)
+	at java.base/java.io.FileInputStream.<init>(FileInputStream.java:152)
+	at net.sf.jasperreports.engine.xml.JRXmlLoader.load(JRXmlLoader.java:219)
+	... 41 more
+
+Dec 16, 2023 10:36:05 AM org.example.ReportGeneratorApp generateReport
+INFO: Database connection closed successfully.
+Dec 16, 2023 10:38:54 AM org.example.ReportGeneratorApp generateReport
+INFO: Database connection closed successfully.
+Dec 16, 2023 2:46:39 PM org.example.ReportGeneratorApp generateReport
+INFO: Database connection closed successfully.
+Dec 16, 2023 2:47:14 PM org.example.ReportGeneratorApp generateReport
+INFO: Database connection closed successfully.
+Dec 16, 2023 2:51:47 PM org.example.ReportGeneratorApp generateReport
+INFO: Database connection closed successfully.
+Dec 16, 2023 2:51:55 PM org.example.ReportGeneratorApp generateReport
+INFO: Database connection closed successfully.
+Dec 16, 2023 3:53:04 PM org.example.ReportGeneratorApp generateReport
+INFO: Database connection closed successfully.
+Dec 16, 2023 4:09:28 PM org.example.ReportGeneratorApp generateReport
+INFO: Database connection closed successfully.
+Dec 16, 2023 4:09:45 PM org.example.ReportGeneratorApp generateReport
+INFO: Database connection closed successfully.
+Dec 16, 2023 4:19:21 PM org.example.ReportGeneratorApp generateReport
+INFO: Database connection closed successfully.
+Dec 16, 2023 4:21:58 PM org.example.ReportGeneratorApp generateReport
+INFO: Database connection closed successfully.
+Dec 16, 2023 4:37:06 PM org.example.ReportGeneratorApp generateReport
+INFO: Database connection closed successfully.
+Dec 16, 2023 4:42:52 PM org.example.ReportGeneratorApp generateReport
+INFO: Database connection closed successfully.
+Dec 16, 2023 6:05:19 PM org.example.ReportGeneratorApp generateReport
+INFO: Database connection closed successfully.
+Dec 16, 2023 7:07:02 PM org.example.ReportGeneratorApp generateReport
+INFO: Database connection closed successfully.
+Dec 16, 2023 7:07:45 PM org.example.ReportGeneratorApp generateReport
+INFO: Database connection closed successfully.
+Dec 17, 2023 9:17:21 AM org.example.ReportGeneratorApp generateReport
+INFO: Database connection closed successfully.
+Dec 17, 2023 9:18:29 AM org.example.ReportGeneratorApp generateReport
+INFO: Database connection closed successfully.
+Dec 17, 2023 11:17:16 AM org.example.ReportGeneratorApp generateReport
+SEVERE: Error generating report
+net.sf.jasperreports.engine.JRException: Errors were encountered when compiling report expressions class file:
+1. The method DAYS(Date, Date) is undefined for the type Raport_1_1702808236556_401441
+                value = DAYS(((java.sql.Date)field_Rental32date.getValue()),((java.sql.Date)field_Return32date.getValue())); //$JR_EXPR_ID=17$
+                        <-->
+2. The method DAYS(Date, Date) is undefined for the type Raport_1_1702808236556_401441
+                value = DAYS(((java.sql.Date)field_Rental32date.getOldValue()),((java.sql.Date)field_Return32date.getOldValue())); //$JR_EXPR_ID=17$
+                        <-->
+3. The method DAYS(Date, Date) is undefined for the type Raport_1_1702808236556_401441
+                value = DAYS(((java.sql.Date)field_Rental32date.getValue()),((java.sql.Date)field_Return32date.getValue())); //$JR_EXPR_ID=17$
+                        <-->
+3 errors
+.
+	at net.sf.jasperreports.engine.design.JRAbstractCompiler.compileReport(JRAbstractCompiler.java:229)
+	at net.sf.jasperreports.engine.JasperCompileManager.compile(JasperCompileManager.java:358)
+	at net.sf.jasperreports.engine.JasperCompileManager.compile(JasperCompileManager.java:291)
+	at net.sf.jasperreports.engine.JasperCompileManager.compileReport(JasperCompileManager.java:576)
+	at org.example.ReportGeneratorApp.generateReport(ReportGeneratorApp.java:138)
+	at org.example.ReportGeneratorApp.lambda$initComponents$0(ReportGeneratorApp.java:91)
+	at java.desktop/javax.swing.AbstractButton.fireActionPerformed(AbstractButton.java:1972)
+	at java.desktop/javax.swing.AbstractButton$Handler.actionPerformed(AbstractButton.java:2314)
+	at java.desktop/javax.swing.DefaultButtonModel.fireActionPerformed(DefaultButtonModel.java:407)
+	at java.desktop/javax.swing.DefaultButtonModel.setPressed(DefaultButtonModel.java:262)
+	at java.desktop/javax.swing.plaf.basic.BasicButtonListener.mouseReleased(BasicButtonListener.java:279)
+	at java.desktop/java.awt.Component.processMouseEvent(Component.java:6621)
+	at java.desktop/javax.swing.JComponent.processMouseEvent(JComponent.java:3398)
+	at java.desktop/java.awt.Component.processEvent(Component.java:6386)
+	at java.desktop/java.awt.Container.processEvent(Container.java:2266)
+	at java.desktop/java.awt.Component.dispatchEventImpl(Component.java:4996)
+	at java.desktop/java.awt.Container.dispatchEventImpl(Container.java:2324)
+	at java.desktop/java.awt.Component.dispatchEvent(Component.java:4828)
+	at java.desktop/java.awt.LightweightDispatcher.retargetMouseEvent(Container.java:4948)
+	at java.desktop/java.awt.LightweightDispatcher.processMouseEvent(Container.java:4575)
+	at java.desktop/java.awt.LightweightDispatcher.dispatchEvent(Container.java:4516)
+	at java.desktop/java.awt.Container.dispatchEventImpl(Container.java:2310)
+	at java.desktop/java.awt.Window.dispatchEventImpl(Window.java:2780)
+	at java.desktop/java.awt.Component.dispatchEvent(Component.java:4828)
+	at java.desktop/java.awt.EventQueue.dispatchEventImpl(EventQueue.java:775)
+	at java.desktop/java.awt.EventQueue$4.run(EventQueue.java:720)
+	at java.desktop/java.awt.EventQueue$4.run(EventQueue.java:714)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:400)
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:87)
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:98)
+	at java.desktop/java.awt.EventQueue$5.run(EventQueue.java:747)
+	at java.desktop/java.awt.EventQueue$5.run(EventQueue.java:745)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:400)
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:87)
+	at java.desktop/java.awt.EventQueue.dispatchEvent(EventQueue.java:744)
+	at java.desktop/java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:203)
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:124)
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:113)
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:109)
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101)
+	at java.desktop/java.awt.EventDispatchThread.run(EventDispatchThread.java:90)
+
+Dec 17, 2023 11:17:21 AM org.example.ReportGeneratorApp generateReport
+INFO: Database connection closed successfully.
+Dec 17, 2023 11:19:32 AM org.example.ReportGeneratorApp generateReport
+INFO: Database connection closed successfully.
+Dec 17, 2023 11:21:07 AM org.example.ReportGeneratorApp generateReport
+INFO: Database connection closed successfully.
+Dec 17, 2023 11:21:26 AM org.example.ReportGeneratorApp generateReport
+INFO: Database connection closed successfully.
+Dec 17, 2023 11:23:32 AM org.example.ReportGeneratorApp generateReport
+INFO: Database connection closed successfully.
+Dec 17, 2023 11:29:36 AM org.example.ReportGeneratorApp generateReport
+INFO: Database connection closed successfully.
+Dec 17, 2023 11:33:18 AM org.example.ReportGeneratorApp generateReport
+INFO: Database connection closed successfully.
+Dec 17, 2023 11:36:27 AM org.example.ReportGeneratorApp generateReport
+INFO: Database connection closed successfully.
+Dec 17, 2023 11:37:23 AM org.example.ReportGeneratorApp generateReport
+INFO: Database connection closed successfully.
+Dec 17, 2023 11:48:44 AM org.example.ReportGeneratorApp generateReport
+SEVERE: Error generating report
+net.sf.jasperreports.engine.JRException: java.io.FileNotFoundException: Templates/Raport_1.jrxml (No such file or directory)
+	at net.sf.jasperreports.engine.xml.JRXmlLoader.load(JRXmlLoader.java:224)
+	at net.sf.jasperreports.engine.xml.JRXmlLoader.load(JRXmlLoader.java:195)
+	at net.sf.jasperreports.engine.xml.JRXmlLoader.load(JRXmlLoader.java:186)
+	at net.sf.jasperreports.engine.JasperCompileManager.compile(JasperCompileManager.java:289)
+	at net.sf.jasperreports.engine.JasperCompileManager.compileReport(JasperCompileManager.java:576)
+	at org.example.ReportGeneratorApp.generateReport(ReportGeneratorApp.java:138)
+	at org.example.ReportGeneratorApp.lambda$initComponents$0(ReportGeneratorApp.java:91)
+	at java.desktop/javax.swing.AbstractButton.fireActionPerformed(AbstractButton.java:1972)
+	at java.desktop/javax.swing.AbstractButton$Handler.actionPerformed(AbstractButton.java:2314)
+	at java.desktop/javax.swing.DefaultButtonModel.fireActionPerformed(DefaultButtonModel.java:407)
+	at java.desktop/javax.swing.DefaultButtonModel.setPressed(DefaultButtonModel.java:262)
+	at java.desktop/javax.swing.plaf.basic.BasicButtonListener.mouseReleased(BasicButtonListener.java:279)
+	at java.desktop/java.awt.Component.processMouseEvent(Component.java:6621)
+	at java.desktop/javax.swing.JComponent.processMouseEvent(JComponent.java:3398)
+	at java.desktop/java.awt.Component.processEvent(Component.java:6386)
+	at java.desktop/java.awt.Container.processEvent(Container.java:2266)
+	at java.desktop/java.awt.Component.dispatchEventImpl(Component.java:4996)
+	at java.desktop/java.awt.Container.dispatchEventImpl(Container.java:2324)
+	at java.desktop/java.awt.Component.dispatchEvent(Component.java:4828)
+	at java.desktop/java.awt.LightweightDispatcher.retargetMouseEvent(Container.java:4948)
+	at java.desktop/java.awt.LightweightDispatcher.processMouseEvent(Container.java:4575)
+	at java.desktop/java.awt.LightweightDispatcher.dispatchEvent(Container.java:4516)
+	at java.desktop/java.awt.Container.dispatchEventImpl(Container.java:2310)
+	at java.desktop/java.awt.Window.dispatchEventImpl(Window.java:2780)
+	at java.desktop/java.awt.Component.dispatchEvent(Component.java:4828)
+	at java.desktop/java.awt.EventQueue.dispatchEventImpl(EventQueue.java:775)
+	at java.desktop/java.awt.EventQueue$4.run(EventQueue.java:720)
+	at java.desktop/java.awt.EventQueue$4.run(EventQueue.java:714)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:400)
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:87)
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:98)
+	at java.desktop/java.awt.EventQueue$5.run(EventQueue.java:747)
+	at java.desktop/java.awt.EventQueue$5.run(EventQueue.java:745)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:400)
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:87)
+	at java.desktop/java.awt.EventQueue.dispatchEvent(EventQueue.java:744)
+	at java.desktop/java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:203)
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:124)
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:113)
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:109)
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101)
+	at java.desktop/java.awt.EventDispatchThread.run(EventDispatchThread.java:90)
+Caused by: java.io.FileNotFoundException: Templates/Raport_1.jrxml (No such file or directory)
+	at java.base/java.io.FileInputStream.open0(Native Method)
+	at java.base/java.io.FileInputStream.open(FileInputStream.java:213)
+	at java.base/java.io.FileInputStream.<init>(FileInputStream.java:152)
+	at net.sf.jasperreports.engine.xml.JRXmlLoader.load(JRXmlLoader.java:219)
+	... 41 more
+
+Dec 17, 2023 11:48:47 AM org.example.ReportGeneratorApp generateReport
+INFO: Database connection closed successfully.
+Dec 17, 2023 11:49:22 AM org.example.ReportGeneratorApp generateReport
+SEVERE: Error generating report
+net.sf.jasperreports.engine.JRException: java.io.FileNotFoundException: Raport_1.jrxml (No such file or directory)
+	at net.sf.jasperreports.engine.xml.JRXmlLoader.load(JRXmlLoader.java:224)
+	at net.sf.jasperreports.engine.xml.JRXmlLoader.load(JRXmlLoader.java:195)
+	at net.sf.jasperreports.engine.xml.JRXmlLoader.load(JRXmlLoader.java:186)
+	at net.sf.jasperreports.engine.JasperCompileManager.compile(JasperCompileManager.java:289)
+	at net.sf.jasperreports.engine.JasperCompileManager.compileReport(JasperCompileManager.java:576)
+	at org.example.ReportGeneratorApp.generateReport(ReportGeneratorApp.java:138)
+	at org.example.ReportGeneratorApp.lambda$initComponents$0(ReportGeneratorApp.java:91)
+	at java.desktop/javax.swing.AbstractButton.fireActionPerformed(AbstractButton.java:1972)
+	at java.desktop/javax.swing.AbstractButton$Handler.actionPerformed(AbstractButton.java:2314)
+	at java.desktop/javax.swing.DefaultButtonModel.fireActionPerformed(DefaultButtonModel.java:407)
+	at java.desktop/javax.swing.DefaultButtonModel.setPressed(DefaultButtonModel.java:262)
+	at java.desktop/javax.swing.plaf.basic.BasicButtonListener.mouseReleased(BasicButtonListener.java:279)
+	at java.desktop/java.awt.Component.processMouseEvent(Component.java:6621)
+	at java.desktop/javax.swing.JComponent.processMouseEvent(JComponent.java:3398)
+	at java.desktop/java.awt.Component.processEvent(Component.java:6386)
+	at java.desktop/java.awt.Container.processEvent(Container.java:2266)
+	at java.desktop/java.awt.Component.dispatchEventImpl(Component.java:4996)
+	at java.desktop/java.awt.Container.dispatchEventImpl(Container.java:2324)
+	at java.desktop/java.awt.Component.dispatchEvent(Component.java:4828)
+	at java.desktop/java.awt.LightweightDispatcher.retargetMouseEvent(Container.java:4948)
+	at java.desktop/java.awt.LightweightDispatcher.processMouseEvent(Container.java:4575)
+	at java.desktop/java.awt.LightweightDispatcher.dispatchEvent(Container.java:4516)
+	at java.desktop/java.awt.Container.dispatchEventImpl(Container.java:2310)
+	at java.desktop/java.awt.Window.dispatchEventImpl(Window.java:2780)
+	at java.desktop/java.awt.Component.dispatchEvent(Component.java:4828)
+	at java.desktop/java.awt.EventQueue.dispatchEventImpl(EventQueue.java:775)
+	at java.desktop/java.awt.EventQueue$4.run(EventQueue.java:720)
+	at java.desktop/java.awt.EventQueue$4.run(EventQueue.java:714)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:400)
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:87)
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:98)
+	at java.desktop/java.awt.EventQueue$5.run(EventQueue.java:747)
+	at java.desktop/java.awt.EventQueue$5.run(EventQueue.java:745)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:400)
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:87)
+	at java.desktop/java.awt.EventQueue.dispatchEvent(EventQueue.java:744)
+	at java.desktop/java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:203)
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:124)
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:113)
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:109)
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101)
+	at java.desktop/java.awt.EventDispatchThread.run(EventDispatchThread.java:90)
+Caused by: java.io.FileNotFoundException: Raport_1.jrxml (No such file or directory)
+	at java.base/java.io.FileInputStream.open0(Native Method)
+	at java.base/java.io.FileInputStream.open(FileInputStream.java:213)
+	at java.base/java.io.FileInputStream.<init>(FileInputStream.java:152)
+	at net.sf.jasperreports.engine.xml.JRXmlLoader.load(JRXmlLoader.java:219)
+	... 41 more
+
+Dec 17, 2023 11:49:23 AM org.example.ReportGeneratorApp generateReport
+INFO: Database connection closed successfully.
+Dec 17, 2023 11:50:13 AM org.example.ReportGeneratorApp generateReport
+SEVERE: Error generating report
+net.sf.jasperreports.engine.JRException: java.io.FileNotFoundException: org.example/Templates/Raport_1.jrxml (No such file or directory)
+	at net.sf.jasperreports.engine.xml.JRXmlLoader.load(JRXmlLoader.java:224)
+	at net.sf.jasperreports.engine.xml.JRXmlLoader.load(JRXmlLoader.java:195)
+	at net.sf.jasperreports.engine.xml.JRXmlLoader.load(JRXmlLoader.java:186)
+	at net.sf.jasperreports.engine.JasperCompileManager.compile(JasperCompileManager.java:289)
+	at net.sf.jasperreports.engine.JasperCompileManager.compileReport(JasperCompileManager.java:576)
+	at org.example.ReportGeneratorApp.generateReport(ReportGeneratorApp.java:138)
+	at org.example.ReportGeneratorApp.lambda$initComponents$0(ReportGeneratorApp.java:91)
+	at java.desktop/javax.swing.AbstractButton.fireActionPerformed(AbstractButton.java:1972)
+	at java.desktop/javax.swing.AbstractButton$Handler.actionPerformed(AbstractButton.java:2314)
+	at java.desktop/javax.swing.DefaultButtonModel.fireActionPerformed(DefaultButtonModel.java:407)
+	at java.desktop/javax.swing.DefaultButtonModel.setPressed(DefaultButtonModel.java:262)
+	at java.desktop/javax.swing.plaf.basic.BasicButtonListener.mouseReleased(BasicButtonListener.java:279)
+	at java.desktop/java.awt.Component.processMouseEvent(Component.java:6621)
+	at java.desktop/javax.swing.JComponent.processMouseEvent(JComponent.java:3398)
+	at java.desktop/java.awt.Component.processEvent(Component.java:6386)
+	at java.desktop/java.awt.Container.processEvent(Container.java:2266)
+	at java.desktop/java.awt.Component.dispatchEventImpl(Component.java:4996)
+	at java.desktop/java.awt.Container.dispatchEventImpl(Container.java:2324)
+	at java.desktop/java.awt.Component.dispatchEvent(Component.java:4828)
+	at java.desktop/java.awt.LightweightDispatcher.retargetMouseEvent(Container.java:4948)
+	at java.desktop/java.awt.LightweightDispatcher.processMouseEvent(Container.java:4575)
+	at java.desktop/java.awt.LightweightDispatcher.dispatchEvent(Container.java:4516)
+	at java.desktop/java.awt.Container.dispatchEventImpl(Container.java:2310)
+	at java.desktop/java.awt.Window.dispatchEventImpl(Window.java:2780)
+	at java.desktop/java.awt.Component.dispatchEvent(Component.java:4828)
+	at java.desktop/java.awt.EventQueue.dispatchEventImpl(EventQueue.java:775)
+	at java.desktop/java.awt.EventQueue$4.run(EventQueue.java:720)
+	at java.desktop/java.awt.EventQueue$4.run(EventQueue.java:714)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:400)
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:87)
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:98)
+	at java.desktop/java.awt.EventQueue$5.run(EventQueue.java:747)
+	at java.desktop/java.awt.EventQueue$5.run(EventQueue.java:745)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:400)
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:87)
+	at java.desktop/java.awt.EventQueue.dispatchEvent(EventQueue.java:744)
+	at java.desktop/java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:203)
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:124)
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:113)
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:109)
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101)
+	at java.desktop/java.awt.EventDispatchThread.run(EventDispatchThread.java:90)
+Caused by: java.io.FileNotFoundException: org.example/Templates/Raport_1.jrxml (No such file or directory)
+	at java.base/java.io.FileInputStream.open0(Native Method)
+	at java.base/java.io.FileInputStream.open(FileInputStream.java:213)
+	at java.base/java.io.FileInputStream.<init>(FileInputStream.java:152)
+	at net.sf.jasperreports.engine.xml.JRXmlLoader.load(JRXmlLoader.java:219)
+	... 41 more
+
+Dec 17, 2023 11:50:14 AM org.example.ReportGeneratorApp generateReport
+INFO: Database connection closed successfully.
+Dec 17, 2023 11:54:20 AM org.example.ReportGeneratorApp generateReport
+INFO: Database connection closed successfully.
+Dec 17, 2023 11:54:49 AM org.example.ReportGeneratorApp generateReport
+INFO: Database connection closed successfully.
+Dec 17, 2023 11:55:18 AM org.example.ReportGeneratorApp generateReport
+INFO: Database connection closed successfully.
+Dec 17, 2023 11:55:40 AM org.example.ReportGeneratorApp generateReport
+INFO: Database connection closed successfully.
+Dec 17, 2023 12:00:57 PM org.example.ReportGeneratorApp generateReport
+INFO: Database connection closed successfully.
+Dec 17, 2023 12:01:19 PM org.example.ReportGeneratorApp generateReport
+INFO: Database connection closed successfully.
+Dec 17, 2023 12:01:32 PM org.example.ReportGeneratorApp generateReport
+INFO: Database connection closed successfully.
+Dec 17, 2023 12:01:46 PM org.example.ReportGeneratorApp generateReport
+INFO: Database connection closed successfully.
+Dec 17, 2023 12:02:22 PM org.example.ReportGeneratorApp generateReport
+INFO: Database connection closed successfully.
+Dec 17, 2023 12:06:12 PM org.example.ReportGeneratorApp generateReport
+INFO: Database connection closed successfully.
+Dec 17, 2023 1:06:33 PM org.example.ReportGeneratorApp generateReport
+INFO: Database connection closed successfully.
+Dec 17, 2023 1:33:10 PM org.example.ReportGeneratorApp generateReport
+INFO: Database connection closed successfully.
+Dec 17, 2023 1:35:56 PM org.example.ReportGeneratorApp generateReport
+INFO: Database connection closed successfully.
+Dec 17, 2023 1:38:34 PM org.example.ReportGeneratorApp generateReport
+INFO: Database connection closed successfully.
