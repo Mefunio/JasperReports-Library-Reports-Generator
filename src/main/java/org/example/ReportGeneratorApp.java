@@ -25,10 +25,11 @@ public class ReportGeneratorApp extends JFrame {
 	private static final String DB_URL = "jdbc:mysql://localhost:3306/biblioteka";
 	private static final String DB_USER = "root";
 	private static final String DB_PASSWORD = "rootroot";
-	private static final String REPORT_AVAILABILITY = "/Users/mefunio/Documents/template/Raport_1.jrxml";
-	private static final String REPORT_PUBLISHERS = "/Users/mefunio/Documents/template/Raport_2.jrxml";
-	private static final String REPORT_REVIEWS = "/Users/mefunio/Documents/template/Raport_3.jrxml";
-	private static final String REPORT_LANGUAGE = "/Users/mefunio/Documents/template/Raport_4.jrxml";
+	private static final String REPORT_AVAILABILITY = "Templates/Raport_1.jrxml";
+	private static final String REPORT_PUBLISHERS = "Templates/Raport_2.jrxml";
+	private static final String REPORT_REVIEWS = "Templates/Raport_3.jrxml";
+	private static final String REPORT_LANGUAGE = "Templates/Raport_4.jrxml";
+	private static final String REPORT_CUSTOMERS = "Templates/Raport_5.jrxml";
 
 	private JTextField nameField;
 	private JTextField lastNameField;
@@ -63,7 +64,7 @@ public class ReportGeneratorApp extends JFrame {
 		JLabel selectionLabel = new JLabel("Template:");
 		selectionLabel.setBounds(20, 30, 100, 30);
 
-		String[] reportOptions = {"Books Availability Report", "Publishers Book Report", "Reviews-Rating Report", "Book Count by Language Report"};
+		String[] reportOptions = {"Books Availability Report", "Publishers Book Report", "Reviews-Rating Report", "Book Count by Language Report", "Rented books by clients"};
 		reportSelector = new JComboBox<>(reportOptions);
 		reportSelector.setBounds(100, 30, 300, 30);
 
@@ -79,7 +80,7 @@ public class ReportGeneratorApp extends JFrame {
 		lastNameField = new JTextField();
 		lastNameField.setBounds(100, 110, 300, 30);
 
-		JLabel descriptionLabel = new JLabel("Description:");
+		JLabel descriptionLabel = new JLabel("Information:");
 		descriptionLabel.setBounds(20, 150, 100, 30);
 
 		descriptionField = new JTextField();
@@ -182,6 +183,7 @@ public class ReportGeneratorApp extends JFrame {
 			case "Publishers Book Report" -> REPORT_PUBLISHERS;
 			case "Reviews-Rating Report" -> REPORT_REVIEWS;
 			case "Book Count by Language Report" -> REPORT_LANGUAGE;
+			case "Rented books by clients" -> REPORT_CUSTOMERS;
 			default -> throw new IllegalArgumentException("Invalid report selection");
 		};
 	}
