@@ -4,6 +4,8 @@ Semestr 3
 ## Versions
 Java 21
 
+MySQL 8.2.0
+
 Jaspersoft Studio 6.20.6
 
-MySQL 8.2.0
+Datagrip 2023.2.3
