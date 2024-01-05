@@ -5,3 +5,5 @@ Semestr 3
 Java 21
 
 Jaspersoft Studio 6.20.6
+
+MySQL 8.2.0
